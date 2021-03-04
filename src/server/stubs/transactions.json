@@ -1,0 +1,102 @@
+[
+    {
+        "customerId": 1,
+        "firstName": "Customer",
+        "lastName": "1",
+        "transactions": [
+            {
+                "transactionId": 1,
+                "transactionAmt": 100.50,
+                "currency": "$",
+                "transactionDt": 1609480800000
+            },
+            {
+                "transactionId": 3,
+                "transactionAmt": 150,
+                "currency": "$",
+                "transactionDt": 1614578400000
+            },
+            {
+                "transactionId": 2,
+                "transactionAmt": 120,
+                "currency": "$",
+                "transactionDt": 1612159200000
+            },
+            {
+                "transactionId": 4,
+                "transactionAmt": 20,
+                "currency": "$",
+                "transactionDt": 1614924000000
+            },
+            {
+                "transactionId": 5,
+                "transactionAmt": 80,
+                "currency": "$",
+                "transactionDt": 1604556000000
+            }
+        ]   
+    },
+    {
+        "customerId": 2,
+        "firstName": "Customer",
+        "lastName": "2",
+        "transactions": [
+            {
+                "transactionId": 2,
+                "transactionAmt": 120,
+                "currency": "$",
+                "transactionDt": 1612159200000
+            },
+            {
+                "transactionId": 3,
+                "transactionAmt": 150,
+                "currency": "$",
+                "transactionDt": 1614578400000
+            },
+            {
+                "transactionId": 1,
+                "transactionAmt": 100,
+                "currency": "$",
+                "transactionDt": 1609480800000
+            }
+        ]
+    },
+    {
+        "customerId": 3,
+        "firstName": "Customer",
+        "lastName": "3",
+        "transactions": [
+            {
+                "transactionId": 2,
+                "transactionAmt": 276,
+                "currency": "$",
+                "transactionDt": 1612159200000
+            },
+            {
+                "transactionId": 3,
+                "transactionAmt": 423,
+                "currency": "$",
+                "transactionDt": 1614578400000
+            },
+            {
+                "transactionId": 1,
+                "transactionAmt": 36,
+                "currency": "$",
+                "transactionDt": 1609480800000
+            }
+        ]
+    },
+    {
+        "customerId": 4,
+        "firstName": "Customer",
+        "lastName": "4",
+        "transactions": [
+            
+        ]
+    },
+    {
+        "customerId": 5,
+        "firstName": "Customer",
+        "lastName": "5"
+    }
+]

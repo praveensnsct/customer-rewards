@@ -1,0 +1,26 @@
+.rewards-grid {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    overflow: auto;
+
+    & table {
+        border-collapse: collapse;
+        padding: 20px;
+    }
+
+    & tr:nth-child(even) {
+        background-color: rgb(169, 196, 214);
+    }
+
+    & td {
+        padding: 20px;
+        border: 1px solid grey;
+        text-align: center;
+    }
+
+    & th {
+        padding: 20px;
+        border: 1px solid grey;
+    }
+}
