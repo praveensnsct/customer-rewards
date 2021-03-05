@@ -38,9 +38,12 @@ Install the following before you start:
     - `$ yarn`
 4.  Start development server
     - `$ yarn start`
+5.  Run Unit tests
+    - `$ yarn test`
 
 ## Package Scripts
 | Script               | Description                                               |
 |----------------------|-----------------------------------------------------------|
 | `yarn start`         | Start development application server
+| `yarn test`          | Run tests
 
