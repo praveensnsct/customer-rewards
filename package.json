@@ -5,14 +5,17 @@
   "author": "Praveen Kumar Thirumurugan",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open --progress"
+    "start": "webpack-dev-server --open --progress",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@testing-library/react": "^11.2.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
+    "jest": "^26.6.3",
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",

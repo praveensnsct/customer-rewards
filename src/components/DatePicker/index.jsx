@@ -42,7 +42,7 @@ const DatePicker = ({ startDate, endDate, onStartDateSelect, onEndDateSelect }) 
 };
 
 DatePicker.propTypes = {
-    startDate: PropTypes.instanceOf(Date),
+    startDate: PropTypes.number,
     endDate: PropTypes.instanceOf(Date),
     onStartDateSelect: PropTypes.func,
     onEndDateSelect: PropTypes.func

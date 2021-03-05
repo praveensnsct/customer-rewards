@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { forEach, reduce } from 'lodash';
+import { forEach } from 'lodash';
 import { DatePicker, Button, Grid, Header } from '../../components';
 import { getTransactions } from './api';
 import { monthMappings } from './constants';
@@ -41,6 +41,7 @@ const App = () => {
             key: 'name'
         }];
 
+        // Get columns for the grid based on start and end date. 
         for (let year = startDateYear; year <= endDateYear; year++) {
             const startMon = year === startDateYear ? startDateMon : 0;
             const endMon = year === endDateYear ? endDateMon : 11;
@@ -100,8 +101,9 @@ const App = () => {
                 if(!userObj.hasOwnProperty(columnKey)) {
                     userObj[columnKey] = 0;
                 }
-                userObj[columnKey] += calculateRewards(txn.transactionAmt);
-                totalCredits += userObj[columnKey];
+                const rewards = calculateRewards(txn.transactionAmt);
+                userObj[columnKey] += rewards;
+                totalCredits += rewards;
                 userObj.total = totalCredits;
             });
             groupedTxn.push(userObj);
@@ -133,6 +135,7 @@ const App = () => {
     return (
         <div className='app-container'>
             <Header title="User Rewards"/>
+            <p>NOTE: We have data from 11/01/2020 to 03/01/2021</p>
             <DatePicker 
                 startDate={startDate}
                 endDate={endDate}
@@ -140,7 +143,7 @@ const App = () => {
                 onEndDateSelect={onEndDateSelect}
             />
             <Button value='Refresh' onClick={fetchData} />
-            <Grid columnDefs={columnDefs} data={transactions} />
+            <Grid id="CustomerRewardsGrid" columnDefs={columnDefs} data={transactions} />
         </div>
     );
 };

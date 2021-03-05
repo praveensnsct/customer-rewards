@@ -5,19 +5,20 @@ import './index.scss';
 
 /**
  * Grid component
+ * @param {id} id - grid id
  * @param {Array} columnDefs - array of objects containing column information
  * @param {Array} data - grid data
  */
-const Grid = ({ columnDefs, data }) => {
+const Grid = ({ id, columnDefs, data }) => {
     return (
-        <div className='rewards-grid'>
+        <div id={id} className='grid-layout'>
             <table>
                 <thead>
                     <tr>
                         {
                             columnDefs.map((column,idx) => {
                                 return (
-                                    <th key={idx}>{column.name}</th>
+                                    <th data-testid={`${column.key}-${idx}-th`} key={idx}>{column.name}</th>
                                 );
                             })
                         }
@@ -33,7 +34,7 @@ const Grid = ({ columnDefs, data }) => {
                                             const val = txn[column.key];
                                             const def = column.default;
                                             return (
-                                                <td key={idx}>{val ? val : def}</td>
+                                                <td data-testid={`${column.key}-${rowIdx}-td`} key={idx}>{val ? val : def}</td>
                                             );
                                         })
                                     }
@@ -48,11 +49,13 @@ const Grid = ({ columnDefs, data }) => {
 };
 
 Grid.propTypes = {
+    id: PropTypes.string,
     columnDefs: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.arrayOf(PropTypes.object)
 };
 
 Grid.defaultProps = {
+    id: '',
     data: []
 };
 
