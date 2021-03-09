@@ -31,9 +31,9 @@ Install the following before you start:
 
 ## Getting Started
 1. Clone project from git repository
-    - `$ git clone https://github.com/praveensnsct/react-rewards.git`
+    - `$ git clone https://github.com/praveensnsct/customer-rewards.git`
 2.  Change to project directory
-    - `$ cd react-rewards`
+    - `$ cd cutomer-rewards`
 3. Install dependencies
     - `$ yarn`
 4.  Start development server
